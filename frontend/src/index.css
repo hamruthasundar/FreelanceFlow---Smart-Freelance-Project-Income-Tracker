@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  background: #0a0a0f;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Input placeholder color */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Date input color on dark bg */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.4);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+/* Spinner animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
